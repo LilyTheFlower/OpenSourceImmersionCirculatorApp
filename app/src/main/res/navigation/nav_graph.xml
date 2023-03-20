@@ -3,26 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.opensourceimmersioncirculator.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/tempFragment"
+        android:name="com.example.opensourceimmersioncirculator.tempFragment"
+        android:label="@string/temp_fragment_label"
+        tools:layout="@layout/fragment_temp">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_tempFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.opensourceimmersioncirculator.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/timerFragment"
+        android:name="com.example.opensourceimmersioncirculator.timerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_timerFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.opensourceimmersioncirculator.settingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.opensourceimmersioncirculator.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tempFragment"
+            app:destination="@id/tempFragment" />
     </fragment>
 </navigation>
