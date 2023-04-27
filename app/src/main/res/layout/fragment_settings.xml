@@ -1,14 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".settingsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/bluetoothText"
+        android:layout_width="178dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
+        android:text="Bluetooth"
+        android:textAlignment="textStart"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/unitsText"
+        android:layout_width="178dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Units"
+        android:textAlignment="textStart"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bluetoothText" />
+
+    <Switch
+        android:id="@+id/themeSwitch"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:thumbTint="@color/highlightDark"
+        android:trackTint="@color/highlightLight"
+        app:layout_constraintBottom_toBottomOf="@+id/themeText"
+        app:layout_constraintStart_toEndOf="@+id/themeText"
+        app:layout_constraintTop_toTopOf="@+id/themeText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="125dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@color/highlightDark"
+        android:text="Search"
+        android:textColor="@color/highlightLight"
+        app:layout_constraintBottom_toBottomOf="@+id/bluetoothText"
+        app:layout_constraintStart_toEndOf="@+id/bluetoothText"
+        app:layout_constraintTop_toTopOf="@+id/bluetoothText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/darkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Dark"
+        android:textColor="@color/DarkModeBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/themeText"
+        app:layout_constraintStart_toEndOf="@+id/themeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/themeText"
+        app:layout_constraintVertical_bias="0.735" />
+
+    <TextView
+        android:id="@+id/lightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Light"
+        android:textColor="@color/DarkModeBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/themeText"
+        app:layout_constraintEnd_toStartOf="@+id/themeSwitch"
+        app:layout_constraintTop_toTopOf="@+id/themeText"
+        app:layout_constraintVertical_bias="0.735" />
+
+    <Switch
+        android:id="@+id/unitSwitch"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="44dp"
+        android:thumbTint="@color/highlightDark"
+        android:trackTint="@color/highlightLight"
+        app:layout_constraintBottom_toBottomOf="@+id/unitsText"
+        app:layout_constraintStart_toEndOf="@+id/unitsText"
+        app:layout_constraintTop_toTopOf="@+id/unitsText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/metricText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Metric"
+        android:textColor="@color/DarkModeBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/unitsText"
+        app:layout_constraintStart_toEndOf="@+id/unitSwitch"
+        app:layout_constraintTop_toTopOf="@+id/unitsText"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <TextView
+        android:id="@+id/imperialText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Imperial"
+        android:textColor="@color/DarkModeBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/unitsText"
+        app:layout_constraintEnd_toStartOf="@+id/unitSwitch"
+        app:layout_constraintTop_toTopOf="@+id/unitsText"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <TextView
+        android:id="@+id/themeText"
+        android:layout_width="178dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Theme"
+        android:textAlignment="textStart"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitsText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

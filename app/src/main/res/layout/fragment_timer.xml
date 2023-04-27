@@ -1,14 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".timerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/timerDisplay"
+        android:layout_width="389dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="16dp"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textColor="@color/textcolor"
+        android:textSize="120sp"
+        app:layout_constraintEnd_toEndOf="@+id/timerCircle"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="@+id/timerCircle"
+        app:layout_constraintTop_toBottomOf="@+id/timerCircle" />
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/hourTensUpButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="-43dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to increase the tens place of the timer hours"
+        android:src="@mipmap/uparrow_button_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/timerDisplay"
+        app:layout_constraintStart_toStartOf="@+id/timerDisplay"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/hourTensDownButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="-32dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to decrease the tens place of the timer hours"
+        android:src="@mipmap/downarrow_button_foreground"
+        app:layout_constraintStart_toStartOf="@+id/timerDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/timerDisplay"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/hourOnesDownButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="-32dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to decrease the ones place of the timer hours"
+        android:src="@mipmap/downarrow_button_foreground"
+        app:layout_constraintStart_toEndOf="@+id/hourTensDownButton"
+        app:layout_constraintTop_toBottomOf="@+id/timerDisplay"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/minutesTensDownButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="-32dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to decrease the tens place of the timer minutes"
+        android:src="@mipmap/downarrow_button_foreground"
+        app:layout_constraintEnd_toStartOf="@+id/minutesOnesDownButton"
+        app:layout_constraintTop_toBottomOf="@+id/timerDisplay"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/minutesOnesDownButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="-32dp"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to decrease the ones place of the timer minutes"
+        android:src="@mipmap/downarrow_button_foreground"
+        app:layout_constraintEnd_toEndOf="@+id/timerDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/timerDisplay"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/hourOnesUpButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="-43dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to increase the ones place of the timer hours"
+        android:src="@mipmap/uparrow_button_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/timerDisplay"
+        app:layout_constraintStart_toEndOf="@+id/hourTensUpButton"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/minutesTensUpButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="-43dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to increase the tens place of the timer minutes"
+        android:src="@mipmap/uparrow_button_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/timerDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/minutesOnesUpButton"
+        app:tint="@color/textcolor" />
+
+    <ImageButton
+        android:id="@+id/minutesOnesUpButton"
+        android:layout_width="54dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="-43dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Button to increase the ones place of the timer minutes"
+        android:src="@mipmap/uparrow_button_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/timerDisplay"
+        app:layout_constraintEnd_toEndOf="@+id/timerDisplay"
+        app:tint="@color/textcolor" />
+
+    <ProgressBar
+
+        android:id="@+id/timerCircle"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="405dp"
+        android:layout_height="358dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="dial that shows the remaining time"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/circular"
+        android:secondaryProgress="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

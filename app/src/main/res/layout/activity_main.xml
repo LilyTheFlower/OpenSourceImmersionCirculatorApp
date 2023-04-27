@@ -6,6 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <include layout="@layout/content_main" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/content_main" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="411dp"
+            android:layout_height="102dp"
+            android:background="@color/topbar"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="77dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="225dp"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="Button to reach the home page"
+            android:src="@mipmap/home_button_foreground"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/home_button_foreground"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="77dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="Button to reach the settings page"
+            android:src="@mipmap/settings_button_foreground"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/settings_button_foreground"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

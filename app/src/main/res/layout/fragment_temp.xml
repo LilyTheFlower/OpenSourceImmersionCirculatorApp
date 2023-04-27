@@ -7,21 +7,49 @@
     tools:context=".tempFragment">
 
     <TextView
-        android:id="@+id/textview_second"
+        android:id="@+id/tempText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+        android:text="100°F"
+        android:textColor="@color/textcolor"
+        android:textSize="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tempCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tempCircle" />
+
+    <ProgressBar
+
+        android:id="@+id/tempCircle"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="660dp"
+        android:layout_height="754dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="90dp"
+        android:clickable="true"
+        android:contentDescription="Dial for Setting the target Temperature"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/circulardial"
+        android:secondaryProgress="100"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/targetTempLabel"
+        android:layout_width="179dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="150dp"
+        android:text="Target Temperature"
+        android:textAlignment="center"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
 </androidx.constraintlayout.widget.ConstraintLayout>

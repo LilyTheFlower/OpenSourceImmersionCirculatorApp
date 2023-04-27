@@ -6,47 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".homeFragment">
 
-    <ImageButton
-        android:id="@+id/settingsButton"
-        android:layout_width="48dp"
+    <TextView
+        android:id="@+id/homeTempDisplay"
+        android:layout_width="0dp"
+        android:layout_height="167dp"
+        android:text="100°F"
+        android:textAlignment="center"
+        android:textColor="@color/textcolor"
+        android:textSize="120sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTempDisplayLabel" />
+
+    <TextView
+        android:id="@+id/homeTempDisplayLabel"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#FEFEFE"
-        android:contentDescription="Settings Button"
-        android:src="@android:drawable/ic_menu_preferences"
+        android:layout_marginTop="250dp"
+        android:text="Current Temperature"
+        android:textAlignment="center"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/homeTempDisplay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginBottom="195dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="196dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="553dp"
-        android:layout_height="591dp"
-        android:layout_marginBottom="76dp"
-        android:src="@mipmap/immersion_circulator_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/homeTimerDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textColor="@color/textcolor"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTimerDisplayLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/homeTimerDisplayLabel"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="52dp"
+        android:text="Time Remaining:"
+        android:textAlignment="center"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTempDisplay" />
+
+    <TextView
+        android:id="@+id/homeTargetTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginEnd="176dp"
+        android:text="100F"
+        android:textColor="@color/DarkModeBackground"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/homeTempDisplay"
+        app:layout_constraintStart_toStartOf="@+id/homeTempDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/homeTempDisplay" />
 </androidx.constraintlayout.widget.ConstraintLayout>
